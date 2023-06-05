@@ -76,7 +76,8 @@ main {
 }
 .sButton:hover {
   border: 2px solid #e06733;
-  color: #008000;
+  color: #ffffff;
+  background: #e06733;
 }
 .welcome {
   background: #edf2ec;
@@ -240,7 +241,7 @@ main {
   min-height: 282px;
 }
 .price-choice__list__header {
-  font-family: 'Inter';
+  font-family: "Inter";
   font-style: normal;
   font-weight: 700;
   font-size: calc(25px + 15 * (100vw - 380px) / 1060);
@@ -294,7 +295,7 @@ main {
   justify-content: space-between;
   width: 100%;
   height: 130px;
-  font-family: 'Inter';
+  font-family: "Inter";
   font-style: normal;
   font-weight: 400;
   font-size: calc(20px + 0 * (100vw - 380px) / 1060);
