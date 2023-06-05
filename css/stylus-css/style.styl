@@ -1,0 +1,274 @@
+* 
+  box-sizing: border-box
+  margin: 0
+  padding: 0
+calcFS(fMax, fMin = fMax)
+  minViewport = 380
+  differenceViewport = 1440 - minViewport
+  differenceFontSize = fMax - fMin
+  return "calc(%s + %s * (100vw - %s) / %s)" % (unit(fMin, "px") differenceFontSize unit(minViewport, "px") differenceViewport)
+body
+  width: 100vw
+  display: flex
+  justify-content: center
+main
+  width: 100%
+.container
+  display: flex
+  flex-direction: column
+  align-items: center
+  width: 90vw
+.header
+  display: flex
+  align-items: center
+  justify-content: space-between
+  width: 100%
+  height: 25vw;
+  max-height: 100px
+.logo
+  font-family: "Inika"
+  font-style: normal
+  font-weight: 400
+  font-size: 16px
+  display: flex
+.logo__img
+  width: 20px
+.navigator
+  display: flex
+  gap: 0 46px
+  font-family: "Inika"
+  font-style: normal
+  font-weight: 400
+  font-size: 16px
+  color: #010201
+  list-style: none
+  & a
+    font-family: "Inika"
+    font-style: normal
+    font-weight: 400
+    font-size: 16px
+    color: #010201
+  & a:hover
+    color: #e06733
+.sButton
+  width: 17vw;
+  max-width 161px
+  min-width: 100px
+  height: 5vw;
+  max-height: 50px
+  min-height: 35px
+  background: none
+  border: 1px solid #e06733
+  border-radius: 5px
+  color: #e06733
+  font-family: "Inika"
+  font-style: normal
+  font-weight: 400
+  font-size: calcFS(16, 10)
+  display: flex
+  align-items: center
+  justify-content: center
+  &:hover
+    border: 2px solid #e06733
+    color: green
+.welcome
+  background: #edf2ec
+  &__img
+    width: 37%
+  &__content
+    width: 50%
+    display: flex
+    flex-direction: column
+    gap: 3vw 0
+  &__header
+    font-family: "Inter"
+    font-style: normal
+    font-weight: 700
+    font-size: calcFS(45, 25)
+    line-height: 1.2
+    color: #717171
+    &__span
+      color: #499a18
+  &__p
+    font-family: "Inter"
+    font-style: normal
+    font-weight: 400
+    font-size: calcFS(20, 16)
+    line-height: 1.6
+  &__button
+    font-family: "Inter"
+    font-style: normal
+    font-weight: 400
+    font-size: calcFS(16, 10)
+
+.about
+  &__content
+    width: 50%
+    display: flex
+    flex-direction: column
+    gap: 4vw 0
+  &__header
+    font-family: "Inika"
+    font-style: normal
+    font-weight: 400
+    font-size: calcFS(40, 25)
+    line-height: 1.1
+    &__span
+      color: #e06733
+  &__p
+    font-family: "Inter"
+    font-style: normal
+    font-weight: 400
+    font-size:  calcFS(20, 15)
+    line-height: 1.2
+  &__img
+    width: 38%
+.service
+  padding: 4vw 7vw
+  &__head
+    display: flex
+    align-items: center
+    justify-content: space-between
+    height: 100px
+  &__header
+    font-family: "Inika"
+    font-style: normal
+    font-weight: 400
+    font-size: calcFS(40, 25)
+    color: #499a18
+  &__button-list
+    display: flex
+    gap: 0 4vw
+.card__list {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 4vw 6vw;
+  padding-top 20px
+}
+.card
+  display: flex
+  flex-direction: column
+  align-items: center
+  gap: 10px 0
+  &__img
+    width: 30vw
+    min-width: 250px;
+  & img
+    border-radius: 20px 20px 0px 0px
+  &__head
+    font-family: "Inter"
+    font-style: normal
+    font-weight: 700
+    font-size: 20px
+    color: #e06733
+  &__p
+    font-family: "Inter"
+    font-style: normal
+    font-weight: 400
+    font-size: 16px
+    line-height: 1;
+    color: #717171
+/*details*/
+.details
+  width: 230px
+  height: auto
+  background: #edf2ec
+  border-radius: 20px
+  position relative
+  &__content
+    padding: 25px 10px 15px 0
+    background: #edf2ec
+    border-bottom-left-radius: 20px
+    border-bottom-right-radius: 20px
+.sumTitle
+  padding: 20px 0 25px 15px
+  font-family: "Inter"
+  font-style: normal
+  font-weight: 700
+  font-size: 17px
+  line-height: 1
+  list-style: none
+  &::after
+    content: url("../img/accordion_btn.svg")
+    position: absolute
+    right: 40px
+/*---*/
+.price
+  &-choice
+    display flex
+    flex-direction: column
+  &-choice__list
+    display: flex
+    flex-direction: column
+    align-items: center
+    justify-content center
+    gap: 35px 0
+    border: 1px solid #E3E1D5
+    border-radius: 20px
+    width: 332px
+    min-height 282px
+    &__header
+      font-family: 'Inter'
+      font-style: normal
+      font-weight: 700
+      font-size: calcFS(40, 25)
+  &-content
+    width: 32vw
+    display: flex
+    flex-direction: column
+    gap: 40px 0
+    align-items: end
+    &__header
+      font-family: "Inter"
+      font-style: normal
+      font-weight: 700
+      font-size: calcFS(40, 20)
+      line-height: 1.1
+      text-align: right
+      &__span
+        color: #499a18
+  &__img
+    width: 10vw
+.contacts
+  background: #edf2ec
+  &__content
+    display: flex
+    justify-content: space-between
+  &__header
+    font-family: "Inika"
+    font-style: normal
+    font-weight: 700
+    font-size: calcFS(40, 25)
+    text-align: center
+    color: #499a18
+    padding-top: 4vw
+  &__img
+    width: 27vw
+  &__wrap-details
+    min-height: 50px
+.footer
+  display: flex
+  align-items: center
+  justify-content: space-between
+  width: 100%
+  height: 130px
+  font-family: 'Inter'
+  font-style: normal
+  font-weight: 400
+  font-size: calcFS(20)
+  line-height: 2
+  &__social
+    display: flex
+    gap: 0 1vw
+
+//общие стили
+.section-style
+  display: flex
+  justify-content: space-between
+  padding: 4vw 7vw
+a
+  text-decoration: none
+  color: #000000
+img
+  width: 100%
